@@ -20,20 +20,10 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('address1')->nullable();
             $table->tinyInteger('districts_id')->default('1');
-            $table->tinyInteger('role_as')->default('0');
+            $table->tinyInteger('role_as')->default('1');
             $table->rememberToken();
             $table->timestamps();
         });
-
-        DB::table('users')->insert([
-            'name' => 'Chaidar Saad',
-            'email' => 'chaidarsaad55@gmail.com',
-            'password' => bcrypt('11111111'),
-            'phone' => '+6285156506238',
-            'address1' => 'Paiton',
-            'districts_id' => 1,
-            'role_as' => '1',
-        ]);
     }
 
     /**
